@@ -20,6 +20,6 @@ namespace TP_Winform
 
         public Marca Marca { get; set; }
 
-        public TipoArticulo Categoria { get; set; }
+        public Categoria Categoria { get; set; }
     }
 }

@@ -6,9 +6,21 @@ using System.Threading.Tasks;
 
 namespace TP_Winform
 {
-    public class TipoArticulo
+    public class Categoria
     {
         public string Nombre { get; set; }
+
+        public Categoria(string name) {
+
+            Nombre = name;
+
+        }
+
+        public override string ToString()
+        {
+            return Nombre;
+        }
+
 
     }
 }

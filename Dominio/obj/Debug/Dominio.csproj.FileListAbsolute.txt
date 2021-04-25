@@ -4,3 +4,9 @@ C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\Tp winform\Dominio\obj\D
 C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\Tp winform\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
 C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\Tp winform\Dominio\obj\Debug\Dominio.dll
 C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\Tp winform\Dominio\obj\Debug\Dominio.pdb
+C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Actividad_2_Ale_Seba\App_De_Escritorio_Winform\Dominio\bin\Debug\Dominio.dll
+C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Actividad_2_Ale_Seba\App_De_Escritorio_Winform\Dominio\bin\Debug\Dominio.pdb
+C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Actividad_2_Ale_Seba\App_De_Escritorio_Winform\Dominio\obj\Debug\Dominio.csprojAssemblyReference.cache
+C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Actividad_2_Ale_Seba\App_De_Escritorio_Winform\Dominio\obj\Debug\Dominio.csproj.CoreCompileInputs.cache
+C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Actividad_2_Ale_Seba\App_De_Escritorio_Winform\Dominio\obj\Debug\Dominio.dll
+C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Actividad_2_Ale_Seba\App_De_Escritorio_Winform\Dominio\obj\Debug\Dominio.pdb

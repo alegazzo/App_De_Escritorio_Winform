@@ -22,22 +22,24 @@ namespace TP_Winform
 
             try
             {
-                conexion.ConnectionString = "data source= ALE-DSK\\SQLEXPRESS; initial catalog= CATALOGO_DB; integrated security=SSPI";
+                conexion.ConnectionString = "data source=DESKTOP-041OPAQ\\SQLEXPRESS01; initial catalog= CATALOGO_DB; integrated security=SSPI";
                 comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "select Codigo,Nombre,Descripcion,Precio,ImagenUrl from ARTICULOS";
+                comando.CommandText = "select A.Codigo, A.Nombre, A.Descripcion, M.Descripcion as Marca, C.Descripcion as Categoria, A.ImagenUrl, A.Precio from ARTICULOS as A inner join MARCAS as M on A.IdMarca=M.Id inner join CATEGORIAS as C on A.IdCategoria=C.Id";
                 comando.Connection = conexion;
 
                 conexion.Open();
                 lector = comando.ExecuteReader();
-                while(lector.Read())
+                while (lector.Read())
                 {
                     Articulo aux = new Articulo();
-                   
+
                     aux.Codigo = (string)lector["Codigo"];
                     aux.Nombre = (string)lector["Nombre"];
                     aux.Descripcion = (string)lector["Descripcion"];
                     aux.ImagenUrl = (string)lector["ImagenUrl"];
                     aux.Precio = (decimal)lector["Precio"];
+                    aux.Marca = new Marca((string)lector["Marca"]);
+                    aux.Categoria = new Categoria((string)lector["Categoria"]);
                    
 
                     lista.Add(aux);

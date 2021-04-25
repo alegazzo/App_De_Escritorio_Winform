@@ -52,9 +52,19 @@ namespace TP_Winform
             nuevaVentana.ShowDialog();
         }
 
+        
         private void RecargarImg(string img)
         {
-            pbArticulo.Load(img);
+            try
+            {
+                pbArticulo.Load(img);
+            }
+            catch (Exception ex)
+            {
+
+                MessageBox.Show("Hubo un error : "+ ex.Message);
+            }
+            
         }
 
         private void dgvArticulos_MouseClick_1(object sender, MouseEventArgs e)
