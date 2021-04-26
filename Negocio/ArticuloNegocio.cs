@@ -22,7 +22,7 @@ namespace TP_Winform
 
             try
             {
-                conexion.ConnectionString = "data source=DESKTOP-041OPAQ\\SQLEXPRESS01; initial catalog= CATALOGO_DB; integrated security=SSPI";
+                conexion.ConnectionString = "data source=(local)\\SQLEXPRESS; initial catalog= CATALOGO_DB; integrated security=SSPI";
                 comando.CommandType = System.Data.CommandType.Text;
                 comando.CommandText = "select A.Codigo, A.Nombre, A.Descripcion, M.Descripcion as Marca, C.Descripcion as Categoria, A.ImagenUrl, A.Precio from ARTICULOS as A inner join MARCAS as M on A.IdMarca=M.Id inner join CATEGORIAS as C on A.IdCategoria=C.Id";
                 comando.Connection = conexion;

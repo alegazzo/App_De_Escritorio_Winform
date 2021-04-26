@@ -16,3 +16,12 @@ C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Act
 C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Actividad_2_Ale_Seba\App_De_Escritorio_Winform\Negocio\obj\Debug\Negocio.csproj.CopyComplete
 C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Actividad_2_Ale_Seba\App_De_Escritorio_Winform\Negocio\obj\Debug\Negocio.dll
 C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Actividad_2_Ale_Seba\App_De_Escritorio_Winform\Negocio\obj\Debug\Negocio.pdb
+C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\Tp winform Seba y Ale\Negocio\bin\Debug\Negocio.dll
+C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\Tp winform Seba y Ale\Negocio\bin\Debug\Negocio.pdb
+C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\Tp winform Seba y Ale\Negocio\bin\Debug\Dominio.dll
+C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\Tp winform Seba y Ale\Negocio\bin\Debug\Dominio.pdb
+C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\Tp winform Seba y Ale\Negocio\obj\Debug\Negocio.csprojAssemblyReference.cache
+C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\Tp winform Seba y Ale\Negocio\obj\Debug\Negocio.csproj.CoreCompileInputs.cache
+C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\Tp winform Seba y Ale\Negocio\obj\Debug\Negocio.csproj.CopyComplete
+C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\Tp winform Seba y Ale\Negocio\obj\Debug\Negocio.dll
+C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\Tp winform Seba y Ale\Negocio\obj\Debug\Negocio.pdb
