@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
+using Datos;
 
 
 
@@ -15,31 +16,27 @@ namespace TP_Winform
         public List<Articulo> Listar ()
         {
             List<Articulo> lista = new List<Articulo>();
-            SqlConnection conexion = new SqlConnection();
-            SqlCommand comando= new SqlCommand();
-            SqlDataReader lector;
-            
+            AccesoDatos datos = new AccesoDatos();
+
 
             try
             {
-                conexion.ConnectionString = "data source=(local)\\SQLEXPRESS; initial catalog= CATALOGO_DB; integrated security=SSPI";
-                comando.CommandType = System.Data.CommandType.Text;
-                comando.CommandText = "select A.Codigo, A.Nombre, A.Descripcion, M.Descripcion as Marca, C.Descripcion as Categoria, A.ImagenUrl, A.Precio from ARTICULOS as A inner join MARCAS as M on A.IdMarca=M.Id inner join CATEGORIAS as C on A.IdCategoria=C.Id";
-                comando.Connection = conexion;
+                
+                datos.SetearConsulta("select A.Codigo, A.Nombre, A.Descripcion, M.Descripcion as Marca, C.Descripcion as Categoria, A.ImagenUrl, A.Precio from ARTICULOS as A inner join MARCAS as M on A.IdMarca=M.Id inner join CATEGORIAS as C on A.IdCategoria=C.Id");
+                datos.LeerConsulta();
 
-                conexion.Open();
-                lector = comando.ExecuteReader();
-                while (lector.Read())
+                
+                while (datos.Lector.Read())
                 {
                     Articulo aux = new Articulo();
 
-                    aux.Codigo = (string)lector["Codigo"];
-                    aux.Nombre = (string)lector["Nombre"];
-                    aux.Descripcion = (string)lector["Descripcion"];
-                    aux.ImagenUrl = (string)lector["ImagenUrl"];
-                    aux.Precio = (decimal)lector["Precio"];
-                    aux.Marca = new Marca((string)lector["Marca"]);
-                    aux.Categoria = new Categoria((string)lector["Categoria"]);
+                    aux.Codigo = (string)datos.Lector["Codigo"];
+                    aux.Nombre = (string)datos.Lector["Nombre"];
+                    aux.Descripcion = (string)datos.Lector["Descripcion"];
+                    aux.ImagenUrl = (string)datos.Lector["ImagenUrl"];
+                    aux.Precio = (decimal)datos.Lector["Precio"];
+                    aux.Marca = new Marca((string)datos.Lector["Marca"]);
+                    aux.Categoria = new Categoria((string)datos.Lector["Categoria"]);
                    
 
                     lista.Add(aux);
@@ -53,7 +50,23 @@ namespace TP_Winform
 
                 throw ex;
             }
+            finally
+            {
+                datos.CerrarConexion();
+            }
         }
 
+        public void Agregar()
+        {
+
+        }
+        public void Modificar() 
+        {
+
+        }
+        public void Eliminar()
+        {
+
+        }
     }
 }

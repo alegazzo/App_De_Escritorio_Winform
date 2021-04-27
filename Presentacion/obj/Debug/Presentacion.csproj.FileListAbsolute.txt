@@ -46,3 +46,5 @@ C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\Tp winform Seba y Ale\Pr
 C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\Tp winform Seba y Ale\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
 C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\Tp winform Seba y Ale\Presentacion\obj\Debug\TP_Winform.exe
 C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\Tp winform Seba y Ale\Presentacion\obj\Debug\TP_Winform.pdb
+C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\Tp winform Seba y Ale\Presentacion\bin\Debug\Datos.dll
+C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\Tp winform Seba y Ale\Presentacion\bin\Debug\Datos.pdb
