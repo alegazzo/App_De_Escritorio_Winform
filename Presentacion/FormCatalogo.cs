@@ -7,6 +7,8 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using Dominio;
+using Negocio;
 
 
 namespace TP_Winform
@@ -23,33 +25,13 @@ namespace TP_Winform
 
         }
         private List<Articulo> listaArticulos ;
-        private void Form1_Load(object sender, EventArgs e)
-        {
-
-           
-                try
-                {
-                ArticuloNegocio catalogoArticulos = new ArticuloNegocio();
-                listaArticulos = catalogoArticulos.Listar();
-                dgvArticulos.DataSource = listaArticulos;
-
-                dgvArticulos.Columns["ImagenUrl"].Visible = false;
-               
-                
-                RecargarImg(listaArticulos[0].ImagenUrl);
-
-                }
-            catch (Exception ex)
-                {
-                    MessageBox.Show(ex.Message);
-                }
-            
-        }
+    
 
         private void btnAgregar_Click(object sender, EventArgs e)
         {
             FormAgregar nuevaVentana = new FormAgregar();
             nuevaVentana.ShowDialog();
+            CargarDgv();
         }
 
         
@@ -62,7 +44,7 @@ namespace TP_Winform
             catch (Exception ex)
             {
 
-                MessageBox.Show("Hubo un error : "+ ex.Message);
+                MessageBox.Show("Hubo un error con la imagen : "+ ex.Message);
             }
             
         }
@@ -71,6 +53,33 @@ namespace TP_Winform
         {
             Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
             RecargarImg(seleccionado.ImagenUrl);
+        }
+
+        private void CargarDgv()
+        {
+
+            try
+            {
+                ArticuloNegocio catalogoArticulos = new ArticuloNegocio();
+                listaArticulos = catalogoArticulos.Listar();
+                dgvArticulos.DataSource = listaArticulos;
+
+                dgvArticulos.Columns["ImagenUrl"].Visible = false;
+
+
+                RecargarImg(listaArticulos[0].ImagenUrl);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
+        private void FormCatalogo_Load(object sender, EventArgs e)
+        {
+            CargarDgv();
         }
     }
 }

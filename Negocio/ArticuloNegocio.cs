@@ -5,10 +5,12 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Data.SqlClient;
 using Datos;
+using Dominio;
 
 
 
-namespace TP_Winform
+namespace Negocio
+
 {
     public class ArticuloNegocio
     {
@@ -17,7 +19,7 @@ namespace TP_Winform
         {
             List<Articulo> lista = new List<Articulo>();
             AccesoDatos datos = new AccesoDatos();
-
+          
 
             try
             {
@@ -56,9 +58,25 @@ namespace TP_Winform
             }
         }
 
-        public void Agregar()
+        public void Agregar(Articulo aux)
         {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                string valores = "values ('" + aux.Codigo+"','"+ aux.Nombre+"','"+aux.Descripcion+"',"+aux.Marca.Id+","+aux.Categoria.Id+",'"+aux.ImagenUrl+"',"+aux.Precio+") ";
+                datos.SetearConsulta("insert into Articulos(Codigo, Nombre, Descripcion, IdMarca, IdCategoria, ImagenUrl, precio)" + valores );
 
+                datos.EjecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.CerrarConexion();
+            }
         }
         public void Modificar() 
         {

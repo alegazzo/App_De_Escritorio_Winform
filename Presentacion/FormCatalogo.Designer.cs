@@ -139,7 +139,7 @@ namespace TP_Winform
             this.Controls.Add(this.dgvArticulos);
             this.Name = "FormCatalogo";
             this.Text = "Catálogo";
-            this.Load += new System.EventHandler(this.Form1_Load);
+            this.Load += new System.EventHandler(this.FormCatalogo_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbArticulo)).EndInit();
             this.ResumeLayout(false);

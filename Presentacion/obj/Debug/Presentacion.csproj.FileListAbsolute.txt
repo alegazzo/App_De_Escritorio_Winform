@@ -48,3 +48,21 @@ C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\Tp winform Seba y Ale\Pr
 C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\Tp winform Seba y Ale\Presentacion\obj\Debug\TP_Winform.pdb
 C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\Tp winform Seba y Ale\Presentacion\bin\Debug\Datos.dll
 C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\Tp winform Seba y Ale\Presentacion\bin\Debug\Datos.pdb
+C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Actividad_2_Ale_Seba\App_De_Escritorio_Winform\Presentacion\bin\Debug\TP_Winform.exe.config
+C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Actividad_2_Ale_Seba\App_De_Escritorio_Winform\Presentacion\bin\Debug\TP_Winform.exe
+C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Actividad_2_Ale_Seba\App_De_Escritorio_Winform\Presentacion\bin\Debug\TP_Winform.pdb
+C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Actividad_2_Ale_Seba\App_De_Escritorio_Winform\Presentacion\bin\Debug\Dominio.dll
+C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Actividad_2_Ale_Seba\App_De_Escritorio_Winform\Presentacion\bin\Debug\Negocio.dll
+C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Actividad_2_Ale_Seba\App_De_Escritorio_Winform\Presentacion\bin\Debug\Datos.dll
+C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Actividad_2_Ale_Seba\App_De_Escritorio_Winform\Presentacion\bin\Debug\Dominio.pdb
+C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Actividad_2_Ale_Seba\App_De_Escritorio_Winform\Presentacion\bin\Debug\Negocio.pdb
+C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Actividad_2_Ale_Seba\App_De_Escritorio_Winform\Presentacion\bin\Debug\Datos.pdb
+C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Actividad_2_Ale_Seba\App_De_Escritorio_Winform\Presentacion\obj\Debug\Presentacion.csprojAssemblyReference.cache
+C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Actividad_2_Ale_Seba\App_De_Escritorio_Winform\Presentacion\obj\Debug\TP_Winform.FormAgregar.resources
+C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Actividad_2_Ale_Seba\App_De_Escritorio_Winform\Presentacion\obj\Debug\TP_Winform.FormCatalogo.resources
+C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Actividad_2_Ale_Seba\App_De_Escritorio_Winform\Presentacion\obj\Debug\TP_Winform.Properties.Resources.resources
+C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Actividad_2_Ale_Seba\App_De_Escritorio_Winform\Presentacion\obj\Debug\Presentacion.csproj.GenerateResource.cache
+C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Actividad_2_Ale_Seba\App_De_Escritorio_Winform\Presentacion\obj\Debug\Presentacion.csproj.CoreCompileInputs.cache
+C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Actividad_2_Ale_Seba\App_De_Escritorio_Winform\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
+C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Actividad_2_Ale_Seba\App_De_Escritorio_Winform\Presentacion\obj\Debug\TP_Winform.exe
+C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Actividad_2_Ale_Seba\App_De_Escritorio_Winform\Presentacion\obj\Debug\TP_Winform.pdb

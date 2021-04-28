@@ -27,3 +27,5 @@ C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\Tp winform Seba y Ale\Ne
 C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\Tp winform Seba y Ale\Negocio\obj\Debug\Negocio.pdb
 C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\Tp winform Seba y Ale\Negocio\bin\Debug\Datos.dll
 C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\Tp winform Seba y Ale\Negocio\bin\Debug\Datos.pdb
+C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Actividad_2_Ale_Seba\App_De_Escritorio_Winform\Negocio\bin\Debug\Datos.dll
+C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Actividad_2_Ale_Seba\App_De_Escritorio_Winform\Negocio\bin\Debug\Datos.pdb

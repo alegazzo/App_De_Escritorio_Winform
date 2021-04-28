@@ -50,6 +50,15 @@ namespace Datos
            
         }
 
+        public void EjecutarAccion()
+        {
+            comando.Connection = conexion;
+            conexion.Open();
+            comando.ExecuteNonQuery();
+        }
+
+
+
 
     }
 }
