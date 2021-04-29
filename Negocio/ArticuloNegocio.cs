@@ -82,8 +82,26 @@ namespace Negocio
         {
 
         }
-        public void Eliminar()
+        public void Eliminar(string codigo)
         {
+            AccesoDatos datos = new AccesoDatos();
+
+            try
+            {
+                
+                datos.SetearConsulta(" delete from ARTICULOS where Codigo = '"+ codigo +"' ");
+                datos.EjecutarAccion();
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.CerrarConexion();
+            }
+         
 
         }
     }

@@ -20,10 +20,7 @@ namespace TP_Winform
             InitializeComponent();  
         }
 
-        private void button4_Click(object sender, EventArgs e)
-        {
-
-        }
+      
         private List<Articulo> listaArticulos ;
     
 
@@ -79,6 +76,22 @@ namespace TP_Winform
 
         private void FormCatalogo_Load(object sender, EventArgs e)
         {
+            CargarDgv();
+        }
+
+        private void btnDetalle_Click(object sender, EventArgs e)
+        {
+            
+            
+            FormDetalle nuevaVentana = new FormDetalle((Articulo)dgvArticulos.CurrentRow.DataBoundItem);
+            nuevaVentana.ShowDialog();
+            
+        }
+
+        private void btnEliminar_Click(object sender, EventArgs e)
+        {
+            FormEliminar nuevaVentana = new FormEliminar((Articulo)dgvArticulos.CurrentRow.DataBoundItem);
+            nuevaVentana.ShowDialog();
             CargarDgv();
         }
     }

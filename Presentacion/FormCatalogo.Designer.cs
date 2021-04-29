@@ -87,6 +87,7 @@ namespace TP_Winform
             this.btnEliminar.TabIndex = 4;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = true;
+            this.btnEliminar.Click += new System.EventHandler(this.btnEliminar_Click);
             // 
             // btnDetalle
             // 
@@ -96,7 +97,7 @@ namespace TP_Winform
             this.btnDetalle.TabIndex = 5;
             this.btnDetalle.Text = "Detalle";
             this.btnDetalle.UseVisualStyleBackColor = true;
-            this.btnDetalle.Click += new System.EventHandler(this.button4_Click);
+            this.btnDetalle.Click += new System.EventHandler(this.btnDetalle_Click);
             // 
             // textBox1
             // 
