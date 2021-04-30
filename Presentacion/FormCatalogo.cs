@@ -50,21 +50,21 @@ namespace TP_Winform
         {
             Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
             RecargarImg(seleccionado.ImagenUrl);
+            CargarDescripcion(seleccionado.Descripcion);
         }
 
         private void CargarDgv()
         {
-
+            
             try
             {
                 ArticuloNegocio catalogoArticulos = new ArticuloNegocio();
                 listaArticulos = catalogoArticulos.Listar();
                 dgvArticulos.DataSource = listaArticulos;
 
-                dgvArticulos.Columns["ImagenUrl"].Visible = false;
-
-
+                ocultarColumnas();
                 RecargarImg(listaArticulos[0].ImagenUrl);
+                CargarDescripcion(listaArticulos[0].Descripcion);
 
             }
             catch (Exception ex)
@@ -93,6 +93,45 @@ namespace TP_Winform
             FormEliminar nuevaVentana = new FormEliminar((Articulo)dgvArticulos.CurrentRow.DataBoundItem);
             nuevaVentana.ShowDialog();
             CargarDgv();
+        }
+
+        private void CargarDescripcion(string text)
+        {
+            lblDescripcion.Text = text;
+        }
+
+        private void btnModificar_Click(object sender, EventArgs e)
+        {
+            //utilizamos la misma ventana de agregararticulo pero sobrecargamos su constructor al pasarle un articulo para cambiar su funcionalidad, asi podra modificar el articulo que se desee.
+            FormAgregar nuevaVentana = new FormAgregar((Articulo)dgvArticulos.CurrentRow.DataBoundItem);
+            nuevaVentana.ShowDialog();
+            CargarDgv();
+        }
+
+     //Filtro
+        private void txtFiltro_KeyUp(object sender, KeyEventArgs e)
+        {
+            //Cuando se ingresa una tecla en el txtFiltro busca si ese valor lo contiene el nombre, descripcion o precio de algunos de los registros.
+            if(txtFiltro.Text != "")
+            {
+                List<Articulo> listaFiltrada = listaArticulos.FindAll(X => X.Nombre.ToUpper().Contains(txtFiltro.Text.ToUpper()) || X.Descripcion.ToUpper().Contains(txtFiltro.Text.ToUpper()) || X.Precio.ToString().Contains(txtFiltro.Text));
+                dgvArticulos.DataSource = null;
+                dgvArticulos.DataSource = listaFiltrada;
+            }
+            else
+            {
+                dgvArticulos.DataSource = null;
+                dgvArticulos.DataSource = listaArticulos;
+                
+            }
+            ocultarColumnas();
+        }
+
+        private void ocultarColumnas()
+        {
+            dgvArticulos.Columns["Id"].Visible = false;
+            dgvArticulos.Columns["ImagenUrl"].Visible = false;
+            dgvArticulos.Columns["Descripcion"].Visible = false;
         }
     }
 }

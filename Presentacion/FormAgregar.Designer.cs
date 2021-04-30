@@ -43,10 +43,10 @@ namespace TP_Winform
             this.label6 = new System.Windows.Forms.Label();
             this.btnAceptar = new System.Windows.Forms.Button();
             this.btnCancelar = new System.Windows.Forms.Button();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.pbArticulo = new System.Windows.Forms.PictureBox();
             this.Precio = new System.Windows.Forms.Label();
             this.txtPrecio = new System.Windows.Forms.TextBox();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbArticulo)).BeginInit();
             this.SuspendLayout();
             // 
             // txtCodigo
@@ -167,13 +167,14 @@ namespace TP_Winform
             this.btnCancelar.UseVisualStyleBackColor = true;
             this.btnCancelar.Click += new System.EventHandler(this.btnCancelar_Click);
             // 
-            // pictureBox1
+            // pbArticulo
             // 
-            this.pictureBox1.Location = new System.Drawing.Point(219, 15);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(229, 245);
-            this.pictureBox1.TabIndex = 14;
-            this.pictureBox1.TabStop = false;
+            this.pbArticulo.Location = new System.Drawing.Point(219, 15);
+            this.pbArticulo.Name = "pbArticulo";
+            this.pbArticulo.Size = new System.Drawing.Size(229, 245);
+            this.pbArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.pbArticulo.TabIndex = 14;
+            this.pbArticulo.TabStop = false;
             // 
             // Precio
             // 
@@ -199,7 +200,7 @@ namespace TP_Winform
             this.ClientSize = new System.Drawing.Size(460, 340);
             this.Controls.Add(this.Precio);
             this.Controls.Add(this.txtPrecio);
-            this.Controls.Add(this.pictureBox1);
+            this.Controls.Add(this.pbArticulo);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.btnAceptar);
             this.Controls.Add(this.label6);
@@ -217,7 +218,7 @@ namespace TP_Winform
             this.Name = "FormAgregar";
             this.Text = "Agregar";
             this.Load += new System.EventHandler(this.FormAgregar_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pbArticulo)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -239,7 +240,7 @@ namespace TP_Winform
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Button btnAceptar;
         private System.Windows.Forms.Button btnCancelar;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox pbArticulo;
         private System.Windows.Forms.Label Precio;
         private System.Windows.Forms.TextBox txtPrecio;
     }

@@ -33,6 +33,12 @@ namespace Datos
 
         }
 
+        
+        public void AgregarParametro(string nombre, object valor)
+        {
+            comando.Parameters.AddWithValue(nombre,valor);
+        }
+
         public void LeerConsulta()
         {
             comando.Connection = conexion;

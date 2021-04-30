@@ -25,7 +25,7 @@ namespace TP_Winform
         {
             
             ArticuloNegocio aux = new ArticuloNegocio();
-
+              
 
             if (txtEliminar.Text == "Eliminar") {
                 aux.Eliminar(txtCodigo.Text);
@@ -34,11 +34,16 @@ namespace TP_Winform
             }
             else
             {
-                MessageBox.Show("Palabra erronea");
+                MessageBox.Show("Palabra erronea, ingrese nuevamente");
              
             }
 
 
+        }
+
+        private void btnCancelar_Click(object sender, EventArgs e)
+        {
+            Close();
         }
     }
 }
