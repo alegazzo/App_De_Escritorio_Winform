@@ -111,10 +111,10 @@ namespace TP_Winform
      //Filtro
         private void txtFiltro_KeyUp(object sender, KeyEventArgs e)
         {
-            //Cuando se ingresa una tecla en el txtFiltro busca si ese valor lo contiene el nombre, descripcion o precio de algunos de los registros.
+            //Cuando se ingresa una tecla en el txtFiltro busca si ese valor lo contiene el nombre, descripcion, precio, categoria o marca de algunos de los registros.
             if(txtFiltro.Text != "")
             {
-                List<Articulo> listaFiltrada = listaArticulos.FindAll(X => X.Nombre.ToUpper().Contains(txtFiltro.Text.ToUpper()) || X.Descripcion.ToUpper().Contains(txtFiltro.Text.ToUpper()) || X.Precio.ToString().Contains(txtFiltro.Text));
+                List<Articulo> listaFiltrada = listaArticulos.FindAll(X => X.Nombre.ToUpper().Contains(txtFiltro.Text.ToUpper()) || X.Descripcion.ToUpper().Contains(txtFiltro.Text.ToUpper()) || X.Precio.ToString().Contains(txtFiltro.Text) || X.Marca.Nombre.ToUpper().Contains(txtFiltro.Text.ToUpper()) || X.Categoria.Nombre.ToUpper().Contains(txtFiltro.Text.ToUpper()) || X.Codigo.ToUpper().Contains(txtFiltro.Text.ToUpper()));
                 dgvArticulos.DataSource = null;
                 dgvArticulos.DataSource = listaFiltrada;
             }

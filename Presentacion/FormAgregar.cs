@@ -65,37 +65,44 @@ namespace TP_Winform
             ArticuloNegocio articuloNegocio = new ArticuloNegocio();
             try
             {
-                if(articulo == null) articulo = new Articulo(); //Si articulo es null es un articulo nuevo.
+                if (articulo == null) articulo = new Articulo(); //Si articulo es null es un articulo nuevo.
 
+
+               
 
                 articulo.Codigo = txtCodigo.Text;
                 articulo.Nombre = txtNombre.Text;
                 articulo.Descripcion = txtDescripcion.Text;
                 articulo.ImagenUrl = txtImagen.Text;
-                articulo.Precio = Convert.ToDecimal(txtPrecio.Text);
+                articulo.Precio = Convert.ToDecimal(txtPrecio.Text) ;
                 articulo.Marca = (Marca)cboMarca.SelectedItem;
                 articulo.Categoria = (Categoria)cboCategoria.SelectedItem;
+        
 
-                if (articulo.Id != 0)
+                if (ValidarCampos() == true)
                 {
-                    //si el id es = 0 significa que es un new articulo(). Si ya tiene un id !=0 es un articulo a modificar que vino desde afuera.
-                    articuloNegocio.Modificar(articulo);
-                    MessageBox.Show("Modificado correctamente");
-                }
-                else
-                {
-                    articuloNegocio.Agregar(articulo);
-                    MessageBox.Show("Agregado correctamente");
-                }
-                Close();
+                    
 
+                    if (articulo.Id != 0)
+                    {
+                        //si el id es = 0 significa que es un new articulo(). Si ya tiene un id !=0 es un articulo a modificar que vino desde afuera.
+                        articuloNegocio.Modificar(articulo);
+                        MessageBox.Show("Modificado correctamente");
+                    }
+                    else
+                    {
+                        articuloNegocio.Agregar(articulo);
+                        MessageBox.Show("Agregado correctamente");
+                    }
+                    Close();
 
+                }
                 
             }
             catch (Exception ex)
             {
 
-                throw ex;
+                MessageBox.Show( "Error: " + ex);
             }
             
         }
@@ -103,6 +110,80 @@ namespace TP_Winform
         private void btnCancelar_Click(object sender, EventArgs e)
         {
             this.Close();
+        }
+
+
+        private bool ValidarCampos()
+        {
+            bool aux = true;
+            if (txtCodigo.Text == "")
+            {
+                aux = false;
+                errorProvider1.SetError(txtCodigo, "Ingresar Codigo");
+
+            }
+            else
+            {
+                errorProvider1.SetError(txtCodigo, "");
+            }
+
+            if (txtNombre.Text == "")
+            {
+                aux = false;
+                errorProvider2.SetError(txtNombre, "Ingresar Nombre");
+
+            }
+            else
+            {
+                errorProvider2.SetError(txtNombre, "");
+            }
+
+            if (txtDescripcion.Text == "")
+            {
+                aux = false;
+                errorProvider3.SetError(txtDescripcion, "Ingresar Descripcion");
+
+            }
+            else
+            {
+                errorProvider3.SetError(txtDescripcion, "");
+            }
+
+            if (txtImagen.Text == "")
+            {
+                aux = false;
+                errorProvider4.SetError(txtImagen, "Ingresar URL de la imagen");
+
+            }
+            else
+            {
+                errorProvider4.SetError(txtImagen, "");
+            }
+
+            if (txtPrecio.Text == "")
+            {
+                aux = false;
+                errorProvider5.SetError(txtPrecio, "Ingresar Precio");
+
+            }
+            else
+            {
+                errorProvider5.SetError(txtPrecio, "");
+            }
+            return aux;
+        }
+
+        private void txtPrecio_Validating(object sender, CancelEventArgs e)
+        {
+            decimal num;
+            if (!decimal.TryParse(txtPrecio.Text, out num))
+            {
+                errorProvider5.SetError(txtPrecio, "Ingrese el valor en numeros");
+            }
+            else
+            {
+                errorProvider5.SetError(txtPrecio, "");
+            }
         }
     }
 }
