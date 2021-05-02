@@ -37,7 +37,6 @@ namespace TP_Winform
             this.btnDetalle = new System.Windows.Forms.Button();
             this.txtFiltro = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
-            this.btnBuscar = new System.Windows.Forms.Button();
             this.lblDescripcion = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dgvArticulos)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pbArticulo)).BeginInit();
@@ -51,15 +50,15 @@ namespace TP_Winform
             this.dgvArticulos.Name = "dgvArticulos";
             this.dgvArticulos.ReadOnly = true;
             this.dgvArticulos.SelectionMode = System.Windows.Forms.DataGridViewSelectionMode.FullRowSelect;
-            this.dgvArticulos.Size = new System.Drawing.Size(664, 377);
+            this.dgvArticulos.Size = new System.Drawing.Size(540, 377);
             this.dgvArticulos.TabIndex = 0;
             this.dgvArticulos.MouseClick += new System.Windows.Forms.MouseEventHandler(this.dgvArticulos_MouseClick_1);
             // 
             // pbArticulo
             // 
-            this.pbArticulo.Location = new System.Drawing.Point(713, 12);
+            this.pbArticulo.Location = new System.Drawing.Point(558, 43);
             this.pbArticulo.Name = "pbArticulo";
-            this.pbArticulo.Size = new System.Drawing.Size(376, 334);
+            this.pbArticulo.Size = new System.Drawing.Size(258, 242);
             this.pbArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pbArticulo.TabIndex = 1;
             this.pbArticulo.TabStop = false;
@@ -106,7 +105,7 @@ namespace TP_Winform
             // 
             // txtFiltro
             // 
-            this.txtFiltro.Location = new System.Drawing.Point(63, 12);
+            this.txtFiltro.Location = new System.Drawing.Point(74, 12);
             this.txtFiltro.Name = "txtFiltro";
             this.txtFiltro.Size = new System.Drawing.Size(216, 20);
             this.txtFiltro.TabIndex = 6;
@@ -117,23 +116,14 @@ namespace TP_Winform
             this.label1.AutoSize = true;
             this.label1.Location = new System.Drawing.Point(25, 15);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(32, 13);
+            this.label1.Size = new System.Drawing.Size(43, 13);
             this.label1.TabIndex = 7;
-            this.label1.Text = "Filtro:";
-            // 
-            // btnBuscar
-            // 
-            this.btnBuscar.Location = new System.Drawing.Point(306, 10);
-            this.btnBuscar.Name = "btnBuscar";
-            this.btnBuscar.Size = new System.Drawing.Size(75, 23);
-            this.btnBuscar.TabIndex = 8;
-            this.btnBuscar.Text = "Buscar";
-            this.btnBuscar.UseVisualStyleBackColor = true;
+            this.label1.Text = "Buscar:";
             // 
             // lblDescripcion
             // 
             this.lblDescripcion.AutoSize = true;
-            this.lblDescripcion.Location = new System.Drawing.Point(710, 361);
+            this.lblDescripcion.Location = new System.Drawing.Point(555, 310);
             this.lblDescripcion.Name = "lblDescripcion";
             this.lblDescripcion.Size = new System.Drawing.Size(35, 13);
             this.lblDescripcion.TabIndex = 9;
@@ -143,9 +133,9 @@ namespace TP_Winform
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1101, 461);
+            this.BackColor = System.Drawing.Color.CornflowerBlue;
+            this.ClientSize = new System.Drawing.Size(840, 461);
             this.Controls.Add(this.lblDescripcion);
-            this.Controls.Add(this.btnBuscar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.txtFiltro);
             this.Controls.Add(this.btnDetalle);
@@ -174,7 +164,6 @@ namespace TP_Winform
         private System.Windows.Forms.Button btnDetalle;
         private System.Windows.Forms.TextBox txtFiltro;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Button btnBuscar;
         private System.Windows.Forms.Label lblDescripcion;
     }
 }

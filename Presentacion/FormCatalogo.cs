@@ -38,10 +38,10 @@ namespace TP_Winform
             {
                 pbArticulo.Load(img);
             }
-            catch (Exception ex)
+            catch (Exception)
             {
 
-                MessageBox.Show("Hubo un error con la imagen : "+ ex.Message);
+                pbArticulo.Load("https://data.pixiz.com/output/user/frame/preview/400x400/1/1/8/3/1713811_09879.jpg");
             }
             
         }
@@ -83,15 +83,31 @@ namespace TP_Winform
         {
             
             
-            FormDetalle nuevaVentana = new FormDetalle((Articulo)dgvArticulos.CurrentRow.DataBoundItem);
+            FormAgregar nuevaVentana = new FormAgregar((Articulo)dgvArticulos.CurrentRow.DataBoundItem,true);
             nuevaVentana.ShowDialog();
             
         }
 
         private void btnEliminar_Click(object sender, EventArgs e)
         {
-            FormEliminar nuevaVentana = new FormEliminar((Articulo)dgvArticulos.CurrentRow.DataBoundItem);
-            nuevaVentana.ShowDialog();
+            Articulo seleccionado = (Articulo)dgvArticulos.CurrentRow.DataBoundItem;
+            ArticuloNegocio aux = new ArticuloNegocio();
+
+            try
+            {
+                if (MessageBox.Show("¿De verdad deseas eliminar este articulo?", "Eliminar Articulo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
+                {
+                    aux.Eliminar(seleccionado.Id);
+                    MessageBox.Show("Articulo eliminado con exito");
+                }
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+          
             CargarDgv();
         }
 

@@ -18,6 +18,8 @@ namespace TP_Winform
 
         //Si el articulo entra como null va a ser un articulo a agregar, en cambio si entra cargado va a ser un articulo a modificar.
         private Articulo articulo = null;
+
+        private bool detalle = false;
         public FormAgregar()
         {
             InitializeComponent();
@@ -27,6 +29,15 @@ namespace TP_Winform
             InitializeComponent();
             articulo = aux;
             Text = "Modificar Articulo";
+        }
+        public FormAgregar(Articulo aux, bool detalle)
+        {
+            InitializeComponent();
+            articulo = aux;
+            Text = "Detalle del Articulo";
+            this.detalle = detalle;
+
+
         }
 
         private void FormAgregar_Load(object sender, EventArgs e)
