@@ -52,6 +52,8 @@ namespace TP_Winform
             this.errorProvider5 = new System.Windows.Forms.ErrorProvider(this.components);
             this.errorProvider2 = new System.Windows.Forms.ErrorProvider(this.components);
             this.btnCancelar = new System.Windows.Forms.Button();
+            this.button1 = new System.Windows.Forms.Button();
+            this.button2 = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.pbArticulo)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.errorProvider3)).BeginInit();
@@ -188,6 +190,7 @@ namespace TP_Winform
             this.btnAceptar.BackColor = System.Drawing.Color.SteelBlue;
             this.btnAceptar.FlatAppearance.BorderSize = 0;
             this.btnAceptar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAceptar.ForeColor = System.Drawing.Color.White;
             this.btnAceptar.Location = new System.Drawing.Point(11, 331);
             this.btnAceptar.Name = "btnAceptar";
             this.btnAceptar.Size = new System.Drawing.Size(75, 23);
@@ -198,7 +201,7 @@ namespace TP_Winform
             // 
             // pbArticulo
             // 
-            this.pbArticulo.Location = new System.Drawing.Point(275, 23);
+            this.pbArticulo.Location = new System.Drawing.Point(301, 23);
             this.pbArticulo.Name = "pbArticulo";
             this.pbArticulo.Size = new System.Drawing.Size(229, 245);
             this.pbArticulo.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
@@ -256,6 +259,7 @@ namespace TP_Winform
             this.btnCancelar.BackColor = System.Drawing.Color.SteelBlue;
             this.btnCancelar.FlatAppearance.BorderSize = 0;
             this.btnCancelar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnCancelar.ForeColor = System.Drawing.Color.White;
             this.btnCancelar.Location = new System.Drawing.Point(455, 331);
             this.btnCancelar.Name = "btnCancelar";
             this.btnCancelar.Size = new System.Drawing.Size(75, 23);
@@ -263,12 +267,42 @@ namespace TP_Winform
             this.btnCancelar.Text = "Cancelar";
             this.btnCancelar.UseVisualStyleBackColor = false;
             // 
+            // button1
+            // 
+            this.button1.BackColor = System.Drawing.Color.SteelBlue;
+            this.button1.FlatAppearance.BorderSize = 0;
+            this.button1.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button1.ForeColor = System.Drawing.Color.White;
+            this.button1.Location = new System.Drawing.Point(226, 227);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(24, 21);
+            this.button1.TabIndex = 19;
+            this.button1.Text = "+";
+            this.button1.UseVisualStyleBackColor = false;
+            // 
+            // button2
+            // 
+            this.button2.BackColor = System.Drawing.Color.SteelBlue;
+            this.button2.FlatAppearance.BorderSize = 0;
+            this.button2.FlatStyle = System.Windows.Forms.FlatStyle.System;
+            this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button2.ForeColor = System.Drawing.Color.White;
+            this.button2.Location = new System.Drawing.Point(226, 273);
+            this.button2.Name = "button2";
+            this.button2.Size = new System.Drawing.Size(24, 21);
+            this.button2.TabIndex = 20;
+            this.button2.Text = "+";
+            this.button2.UseVisualStyleBackColor = false;
+            // 
             // FormAgregar
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(49)))), ((int)(((byte)(66)))), ((int)(((byte)(80)))));
             this.ClientSize = new System.Drawing.Size(542, 366);
+            this.Controls.Add(this.button2);
+            this.Controls.Add(this.button1);
             this.Controls.Add(this.btnCancelar);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.pbArticulo);
@@ -326,5 +360,7 @@ namespace TP_Winform
         private System.Windows.Forms.ErrorProvider errorProvider5;
         private System.Windows.Forms.ErrorProvider errorProvider2;
         private System.Windows.Forms.Button btnCancelar;
+        private System.Windows.Forms.Button button2;
+        private System.Windows.Forms.Button button1;
     }
 }
