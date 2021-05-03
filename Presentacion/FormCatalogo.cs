@@ -41,7 +41,7 @@ namespace TP_Winform
             catch (Exception)
             {
 
-                pbArticulo.Load("https://data.pixiz.com/output/user/frame/preview/400x400/1/1/8/3/1713811_09879.jpg");
+                pbArticulo.Load("https://madrilena.es/wp-content/themes/madrilena/images/no-image/No-Image-Found-400x264.png");
             }
             
         }
@@ -149,5 +149,47 @@ namespace TP_Winform
             dgvArticulos.Columns["ImagenUrl"].Visible = false;
             dgvArticulos.Columns["Descripcion"].Visible = false;
         }
+
+        private void btnOrdenar_Click(object sender, EventArgs e)
+        {
+            
+            string Aux = cboOrdenar.Text;
+
+            if (Aux=="Mayor a menor")
+            {
+                Aux = "Desc";
+                CargarDgv2(Aux);
+            }
+            if (Aux == "Menor a mayor")
+            {
+                Aux = "Asc";
+                CargarDgv2(Aux);
+            }
+
+        }
+
+
+
+        private void CargarDgv2 (string Ordenamiento)
+        {
+            
+            try
+            {
+                ArticuloNegocio catalogoArticulos = new ArticuloNegocio();
+                listaArticulos = catalogoArticulos.ListarOrdenado(Ordenamiento);
+                dgvArticulos.DataSource = listaArticulos;
+
+                ocultarColumnas();
+                RecargarImg(listaArticulos[0].ImagenUrl);
+                CargarDescripcion(listaArticulos[0].Descripcion);
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+
+        }
+
     }
 }

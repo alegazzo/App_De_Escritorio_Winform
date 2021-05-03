@@ -140,5 +140,52 @@ namespace Negocio
          
 
         }
+
+        public List<Articulo> ListarOrdenado(string Ordenamiento)
+        {
+            List<Articulo> lista = new List<Articulo>();
+            AccesoDatos datos = new AccesoDatos();
+
+
+            try
+            {
+
+                datos.SetearConsulta("select A.Id, A.Codigo, A.Nombre, A.Descripcion, M.Descripcion as Marca, C.Descripcion as Categoria, A.ImagenUrl, A.Precio, M.Id as IdMarca, C.Id as IdCategoria from ARTICULOS as A inner join MARCAS as M on A.IdMarca=M.Id inner join CATEGORIAS as C on A.IdCategoria=C.Id order by Precio "+Ordenamiento);
+                datos.LeerConsulta();
+
+
+                while (datos.Lector.Read())
+                {
+                    Articulo aux = new Articulo();
+
+                    aux.Id = (int)datos.Lector["Id"];
+                    aux.Codigo = (string)datos.Lector["Codigo"];
+                    aux.Nombre = (string)datos.Lector["Nombre"];
+                    aux.Descripcion = (string)datos.Lector["Descripcion"];
+                    aux.ImagenUrl = (string)datos.Lector["ImagenUrl"];
+                    aux.Precio = (decimal)datos.Lector["Precio"];
+                    aux.Marca = new Marca((string)datos.Lector["Marca"]);
+                    aux.Marca.Id = (int)datos.Lector["IdMarca"];
+                    aux.Categoria = new Categoria((string)datos.Lector["Categoria"]);
+                    aux.Categoria.Id = (int)datos.Lector["IdCategoria"];
+
+
+                    lista.Add(aux);
+
+                }
+
+                return lista;
+            }
+            catch (Exception ex)
+            {
+
+                throw ex;
+            }
+            finally
+            {
+                datos.CerrarConexion();
+            }
+        }
+
     }
 }

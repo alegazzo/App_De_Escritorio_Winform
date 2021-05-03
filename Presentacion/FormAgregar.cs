@@ -64,9 +64,9 @@ namespace TP_Winform
                 cboCategoria.SelectedValue = articulo.Categoria.Id;
                 cboMarca.SelectedValue = articulo.Marca.Id;
                 txtPrecio.Text = Convert.ToString(articulo.Precio);
-
+                RecargarImg(articulo.ImagenUrl);
             }
-
+            activarDesactivarGbx();
            
         }
 
@@ -79,20 +79,19 @@ namespace TP_Winform
                 if (articulo == null) articulo = new Articulo(); //Si articulo es null es un articulo nuevo.
 
 
-               
+              
 
-                articulo.Codigo = txtCodigo.Text;
-                articulo.Nombre = txtNombre.Text;
-                articulo.Descripcion = txtDescripcion.Text;
-                articulo.ImagenUrl = txtImagen.Text;
-                articulo.Precio = Convert.ToDecimal(txtPrecio.Text) ;
-                articulo.Marca = (Marca)cboMarca.SelectedItem;
-                articulo.Categoria = (Categoria)cboCategoria.SelectedItem;
-        
+             
 
                 if (ValidarCampos() == true)
                 {
-                    
+                    articulo.Codigo = txtCodigo.Text;
+                    articulo.Nombre = txtNombre.Text;
+                    articulo.Descripcion = txtDescripcion.Text;
+                    articulo.ImagenUrl = txtImagen.Text;
+                    articulo.Marca = (Marca)cboMarca.SelectedItem;
+                    articulo.Categoria = (Categoria)cboCategoria.SelectedItem;
+                    articulo.Precio = Convert.ToDecimal(txtPrecio.Text);
 
                     if (articulo.Id != 0)
                     {
@@ -110,10 +109,10 @@ namespace TP_Winform
                 }
                 
             }
-            catch (Exception ex)
+            catch (Exception )
             {
 
-                MessageBox.Show( "Error: " + ex);
+               // MessageBox.Show( "Error: " + ex);
             }
             
         }
@@ -130,7 +129,7 @@ namespace TP_Winform
             if (txtCodigo.Text == "")
             {
                 aux = false;
-                errorProvider1.SetError(txtCodigo, "Ingresar Codigo");
+                errorProvider1.SetError(txtCodigo, "Datos incompletos");
 
             }
             else
@@ -184,17 +183,50 @@ namespace TP_Winform
             return aux;
         }
 
-        private void txtPrecio_Validating(object sender, CancelEventArgs e)
+    
+
+        private void txtPrecio_KeyPress(object sender, KeyPressEventArgs e)
         {
-            decimal num;
-            if (!decimal.TryParse(txtPrecio.Text, out num))
+            if ((e.KeyChar < 48 || e.KeyChar > 59) && e.KeyChar != 8)
+                e.Handled = true;
+        }
+
+        private void activarDesactivarGbx() {
+
+            txtCodigo.ReadOnly = detalle;
+            txtNombre.ReadOnly = detalle;
+            txtDescripcion.ReadOnly = detalle;
+            txtImagen.ReadOnly = detalle;
+            txtPrecio.ReadOnly = detalle;
+
+            cboCategoria.Enabled = !detalle;
+            cboMarca.Enabled = !detalle;
+
+            btnAceptar.Visible = !detalle;
+            btnCancelar.Visible = !detalle;
+            
+        
+        
+        
+        }
+        private void RecargarImg(string img)
+        {
+            try
             {
-                errorProvider5.SetError(txtPrecio, "Ingrese el valor en numeros");
+                pbArticulo.Load(img);
             }
-            else
+            catch (Exception)
             {
-                errorProvider5.SetError(txtPrecio, "");
+
+                pbArticulo.Load("https://madrilena.es/wp-content/themes/madrilena/images/no-image/No-Image-Found-400x264.png");
             }
+
+        }
+
+        private void txtImagen_TextChanged(object sender, EventArgs e)
+        {
+            RecargarImg(txtImagen.Text);
         }
     }
+    
 }
