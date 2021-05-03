@@ -112,7 +112,7 @@ namespace TP_Winform
             catch (Exception )
             {
 
-               // MessageBox.Show( "Error: " + ex);
+               
             }
             
         }
@@ -198,6 +198,9 @@ namespace TP_Winform
             txtDescripcion.ReadOnly = detalle;
             txtImagen.ReadOnly = detalle;
             txtPrecio.ReadOnly = detalle;
+            btnCategoria.Visible = !detalle;
+            btnMarca.Visible = !detalle;
+
 
             cboCategoria.Enabled = !detalle;
             cboMarca.Enabled = !detalle;
@@ -226,6 +229,27 @@ namespace TP_Winform
         private void txtImagen_TextChanged(object sender, EventArgs e)
         {
             RecargarImg(txtImagen.Text);
+        }
+
+        private void btnCategoria_Click(object sender, EventArgs e)
+        {
+            bool aux = true;
+            FormExtra nuevaVentana = new FormExtra(aux);
+            nuevaVentana.ShowDialog();
+            FormAgregar_Load(sender, e);
+
+        }
+
+        private void btnMarca_Click(object sender, EventArgs e)
+        {
+            FormExtra nuevaVentana = new FormExtra();
+            nuevaVentana.ShowDialog();
+            FormAgregar_Load(sender, e);
+        }
+
+        private void btnCancelar_Click_1(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
     

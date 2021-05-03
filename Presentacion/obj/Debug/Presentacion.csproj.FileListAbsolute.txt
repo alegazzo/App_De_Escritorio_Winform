@@ -66,3 +66,4 @@ C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Act
 C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Actividad_2_Ale_Seba\App_De_Escritorio_Winform\Presentacion\obj\Debug\Presentacion.csproj.CopyComplete
 C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Actividad_2_Ale_Seba\App_De_Escritorio_Winform\Presentacion\obj\Debug\TP_Winform.exe
 C:\Users\Sebastian\Desktop\Facultad\2do AÑO DE PROGRAMACION\Programacion\TP_Actividad_2_Ale_Seba\App_De_Escritorio_Winform\Presentacion\obj\Debug\TP_Winform.pdb
+C:\Users\AleGazzo\Desktop\UTN\3er cuatri\Programacion 3\Tp winform Seba y Ale\Presentacion\obj\Debug\TP_Winform.FormExtra.resources

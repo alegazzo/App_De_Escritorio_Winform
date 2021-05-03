@@ -44,7 +44,26 @@ namespace Negocio
         }
 
 
+        public void Agregar(Categoria aux)
+        {
+            AccesoDatos datos = new AccesoDatos();
+            try
+            {
+                datos.SetearConsulta("insert into CATEGORIAS(Descripcion) values ('"+aux.Nombre+"')");
 
+                datos.EjecutarAccion();
+
+            }
+            catch (Exception)
+            {
+
+                throw;
+            }
+            finally
+            {
+                datos.CerrarConexion();
+            }
+        }
 
     }
 }
